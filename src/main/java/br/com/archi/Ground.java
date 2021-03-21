@@ -28,4 +28,16 @@ public class Ground {
     if (this.texture == 2) return 4.0;
     return 0.0;
   }
+
+  public double getIdealMagnesium(){
+    if (this.texture == 1) return 1.5;
+    if (this.texture == 2) return 1.0;
+    return 0.0;
+  }
+
+  public double getIdealSulfur(){
+    if (this.texture == 1) return 9.0;
+    if (this.texture == 2) return 6.0;
+    return 0.0;
+  }
 }
