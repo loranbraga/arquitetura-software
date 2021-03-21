@@ -40,4 +40,8 @@ public class Ground {
     if (this.texture == 2) return 6.0;
     return 0.0;
   }
+
+  public double getIdealAluminium(){
+    return 0.0;
+  }
 }
