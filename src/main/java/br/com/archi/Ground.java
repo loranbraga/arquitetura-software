@@ -16,4 +16,10 @@ public class Ground {
     if (this.texture == 2) return 12.0;
     return 0.0;
   }
+
+  public double getIdealPotassium(){
+    if (this.texture == 1) return 0.35;
+    if (this.texture == 2) return 10.25;
+    return 0.0;
+  }
 }
