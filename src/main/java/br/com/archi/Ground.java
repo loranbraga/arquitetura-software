@@ -9,9 +9,10 @@ public class Ground {
   private double sulfur;
   private double aluminuim;
   private double potencialAcid;
+  private double mo;
 
 
-  public Ground(int texture,  double phospor, double potassium, double calcium, double magnesium, double sulfur, double aluminuim, double potencialAcid) {
+  public Ground(int texture,  double phospor, double potassium, double calcium, double magnesium, double sulfur, double aluminuim, double potencialAcid, double mo) {
     this.texture = texture;
     this.phospor = phospor;
     this.potassium = potassium;
@@ -20,6 +21,7 @@ public class Ground {
     this.sulfur = sulfur;
     this.aluminuim = aluminuim;
     this.potencialAcid = potencialAcid;
+    this.mo = mo;
   }
 
   public Ground() {
@@ -29,10 +31,20 @@ public class Ground {
     this.magnesium = 0.0;
     this.sulfur = 0.0;
     this.aluminuim = 0.0;
+    this.potencialAcid = 0.0;
+    this.mo = 0.0;
   }
 
   public double sumCmol() {
     return this.calcium + this.potassium + this.magnesium;
+  }
+
+  public double getCarbon() {
+    return moPercentual()/ 1.72*10;
+  }
+
+  public double moPercentual() {
+    return mo/10;
   }
 
   public double ctcCmol() {

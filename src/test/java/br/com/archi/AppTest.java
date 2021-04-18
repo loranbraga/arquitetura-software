@@ -14,24 +14,31 @@ public class AppTest
      */
 
     @Test
+    public void getCarbon()
+    {
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35, 30.7);
+        System.out.println(ground.getCarbon());
+        assertEquals( 17.848837209302324, ground.getCarbon(), 0 );
+    }
+
+    @Test
     public void baseSaturation()
     {
-        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
-        System.out.println(ground.baseSaturation());
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35, 30.7);
         assertEquals( 58.494957331264544, ground.baseSaturation(), 0 );
     }
     
     @Test
     public void sumCmol()
     {
-        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35, 30.7);
         assertEquals( 7.54, ground.sumCmol(), 0 );
     }
 
     @Test
     public void ctcCmol()
     {
-        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35, 30.7);
         assertEquals( 12.89, ground.ctcCmol(), 0 );
     }
 
