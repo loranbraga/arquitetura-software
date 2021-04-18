@@ -12,6 +12,21 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
+
+    @Test
+    public void sumCmol()
+    {
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
+        assertEquals( 7.54, ground.sumCmol(), 0 );
+    }
+
+    @Test
+    public void ctcCmol()
+    {
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
+        assertEquals( 12.89, ground.ctcCmol(), 0 );
+    }
+
     @Test
     public void idealPhosphorTexture1()
     {

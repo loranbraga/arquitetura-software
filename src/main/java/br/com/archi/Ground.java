@@ -2,6 +2,42 @@ package br.com.archi;
 
 public class Ground {
   private int texture;
+  private double phospor;
+  private double potassium;
+  private double calcium;
+  private double magnesium;
+  private double sulfur;
+  private double aluminuim;
+  private double potencialAcid;
+
+
+  public Ground(int texture,  double phospor, double potassium, double calcium, double magnesium, double sulfur, double aluminuim, double potencialAcid) {
+    this.texture = texture;
+    this.phospor = phospor;
+    this.potassium = potassium;
+    this.calcium = calcium;
+    this.magnesium = magnesium;
+    this.sulfur = sulfur;
+    this.aluminuim = aluminuim;
+    this.potencialAcid = potencialAcid;
+  }
+
+  public Ground() {
+    this.phospor = 0.0;
+    this.potassium = 0.0;
+    this.calcium = 0.0;
+    this.magnesium = 0.0;
+    this.sulfur = 0.0;
+    this.aluminuim = 0.0;
+  }
+
+  public double sumCmol() {
+    return this.calcium + this.potassium + this.magnesium;
+  }
+
+  public double ctcCmol() {
+    return sumCmol() + this.potencialAcid;
+  }
 
   public void setTexture(int texture){
     this.texture = texture;
