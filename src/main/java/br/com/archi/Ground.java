@@ -39,6 +39,10 @@ public class Ground {
     return sumCmol() + this.potencialAcid;
   }
 
+  public double baseSaturation() {
+    return 100*sumCmol()/ctcCmol();
+  }
+
   public void setTexture(int texture){
     this.texture = texture;
   }

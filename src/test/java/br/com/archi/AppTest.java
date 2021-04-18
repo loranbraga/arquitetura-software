@@ -14,6 +14,14 @@ public class AppTest
      */
 
     @Test
+    public void baseSaturation()
+    {
+        Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
+        System.out.println(ground.baseSaturation());
+        assertEquals( 58.494957331264544, ground.baseSaturation(), 0 );
+    }
+    
+    @Test
     public void sumCmol()
     {
         Ground ground = new Ground(1, 10.23, 0.15, 5.76, 1.63, 1.10, 0.00, 5.35);
