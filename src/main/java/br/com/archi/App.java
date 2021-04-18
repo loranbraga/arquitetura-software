@@ -1,7 +1,5 @@
 package br.com.archi;
 
-import br.com.archi.Ground;
-
 /**
  * Hello world!
  *
