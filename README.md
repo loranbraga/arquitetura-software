@@ -1,6 +1,6 @@
 # Relatório
 
-Relatório antes da refatoraçãp
+Relatório antes da refatoração
 
 ```
 ❯ cloc main
