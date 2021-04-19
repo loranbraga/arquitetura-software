@@ -26,6 +26,6 @@ public class CorrectionTest {
     {
       Ground ground = new Ground(1, 8.59, 0.15, 5.76, 1.63, 3.67, 0.00, 5.35, 30.7);
       PhosporCorrection phosporCorrection = new PhosporCorrection(ground, 1, 10, 0.7, 12.00);
-      assertEquals(0.6150285714285715, phosporCorrection.getValueByHec(), 0);
+      assertEquals(0.6150285714285715, phosporCorrection.amountHec(), 0);
     }
 }

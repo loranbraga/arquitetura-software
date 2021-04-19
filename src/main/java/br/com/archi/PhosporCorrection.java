@@ -50,7 +50,7 @@ public class PhosporCorrection {
     return ((this.goal - this.ground.getPhospor()) * 4.58 / this.efficiency * (100 / this.getValueSource()));
   }
 
-  public double getValueByHec(){
+  public double amountHec(){
     return (this.value * this.correction() / 1000) ;
   }
 

@@ -100,4 +100,8 @@ public class Ground {
   public double getPhospor(){
     return phospor;
   }
+
+  public double getPotassium(){
+    return potassium;
+  }
 }
