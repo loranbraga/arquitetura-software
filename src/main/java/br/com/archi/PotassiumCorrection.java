@@ -5,6 +5,7 @@ public class PotassiumCorrection {
   private int source;
   private double goal;
   private double value; // R$/ton
+  private final double[] sourceValue = {58.0,52.0, 22.0};
   
   public PotassiumCorrection(Ground ground, int source, double goal, double value) {
     this.ground = ground;
@@ -12,22 +13,9 @@ public class PotassiumCorrection {
     this.goal = goal;
     this.value = value;
   }
-
-  public double getValueSource() {
-    switch(this.source) {
-        case 1: 
-            return 58.0;
-        case 2: 
-            return 52.0;   
-        case 3: 
-            return 22.0; 
-        default:
-            return 0.0;
-    }
-  }
   
   public double correction() {
-    return (((this.ground.getPotassium() * this.goal / this.ground.getPotassium()/this.ground.ctcCmol()*100) - this.ground.getPotassium()) * 1104 / getValueSource());
+    return (((this.ground.getPotassium() * this.goal / this.ground.getPotassium()/this.ground.ctcCmol()*100) - this.ground.getPotassium()) * 1104 / sourceValue[source-1]);
   }   
   
   public double amountHec() {
