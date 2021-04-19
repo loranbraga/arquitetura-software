@@ -1,7 +1,9 @@
 package br.com.archi;
 
+import br.com.archi.enums.Texture;
+
 public class Ground {
-  private int texture;
+  private Texture texture;
   private double phospor;
   private double potassium;
   private double calcium;
@@ -12,7 +14,7 @@ public class Ground {
   private double mo;
 
 
-  public Ground(int texture,  double phospor, double potassium, double calcium, double magnesium, double sulfur, double aluminuim, double potencialAcid, double mo) {
+  public Ground(Texture texture, double phospor, double potassium, double calcium, double magnesium, double sulfur, double aluminuim, double potencialAcid, double mo) {
     this.texture = texture;
     this.phospor = phospor;
     this.potassium = potassium;
@@ -22,6 +24,18 @@ public class Ground {
     this.aluminuim = aluminuim;
     this.potencialAcid = potencialAcid;
     this.mo = mo;
+  }
+
+  public Ground(Texture texture) {
+    this.texture = texture;
+    this.phospor = 0.0;
+    this.potassium = 0.0;
+    this.calcium = 0.0;
+    this.magnesium = 0.0;
+    this.sulfur = 0.0;
+    this.aluminuim = 0.0;
+    this.potencialAcid = 0.0;
+    this.mo = 0.0;
   }
 
   public Ground() {
@@ -55,42 +69,59 @@ public class Ground {
     return 100*sumCmol()/ctcCmol();
   }
 
-  public void setTexture(int texture){
-    this.texture = texture;
-  }
-
-  public int getTexture(){
-    return this.texture;
-  }
-
   public double getIdealPhosphor(){
-    if (this.texture == 1) return 9.0;
-    if (this.texture == 2) return 12.0;
-    return 0.0;
+    switch(this.texture){
+      case ARGILOSO:
+          return 9.0;
+      case TEXTURA_MEDIA:
+          return 12.0;
+      default:
+          return 0.0;
+    }
   }
 
   public double getIdealPotassium(){
-    if (this.texture == 1) return 0.35;
-    if (this.texture == 2) return 0.25;
-    return 0.0;
+    switch(this.texture){
+      case ARGILOSO:
+          return 0.35;
+      case TEXTURA_MEDIA:
+          return 0.25;
+      default:
+          return 0.0;
+    }
   }
 
   public double getIdealCalcium(){
-    if (this.texture == 1) return 6.0;
-    if (this.texture == 2) return 4.0;
-    return 0.0;
+    switch(this.texture){
+      case ARGILOSO:
+          return 6.0;
+      case TEXTURA_MEDIA:
+          return 4.0;
+      default:
+          return 0.0;
+    }
   }
 
   public double getIdealMagnesium(){
-    if (this.texture == 1) return 1.5;
-    if (this.texture == 2) return 1.0;
-    return 0.0;
+    switch(this.texture){
+      case ARGILOSO:
+          return 1.5;
+      case TEXTURA_MEDIA:
+          return 1.0;
+      default:
+          return 0.0;
+    }
   }
 
   public double getIdealSulfur(){
-    if (this.texture == 1) return 9.0;
-    if (this.texture == 2) return 6.0;
-    return 0.0;
+    switch(this.texture){
+      case ARGILOSO:
+          return 9.0;
+      case TEXTURA_MEDIA:
+          return 6.0;
+      default:
+          return 0.0;
+    }
   }
 
   public double getIdealAluminium(){
