@@ -27,8 +27,6 @@ public class PotassiumCorrection {
   }
   
   public double correction() {
-    // System.out.println(this.ground.getPotassium()/this.ground.ctcCmol()*100);
-    // System.out.println((this.ground.getPotassium() * this.goal / this.ground.ctcCmol()/this.ground.sumCmol()));
     return (((this.ground.getPotassium() * this.goal / this.ground.getPotassium()/this.ground.ctcCmol()*100) - this.ground.getPotassium()) * 1104 / getValueSource());
   }   
   
