@@ -96,4 +96,8 @@ public class Ground {
   public double getIdealAluminium(){
     return 0.0;
   }
+
+  public double getPhospor(){
+    return phospor;
+  }
 }
