@@ -1,13 +1,13 @@
 package br.com.archi;
 
-public class PhosporCorretion {
+public class PhosporCorrection {
   private Ground ground;
   private int source;   
   private double goal;
   private double efficiency;
   private double value; // R$/ton
 
-  public PhosporCorretion(Ground ground, int source, double goal, double efficiency, double value){
+  public PhosporCorrection(Ground ground, int source, double goal, double efficiency, double value){
     this.ground = ground;
     this.source = source;
     this.goal = goal;
