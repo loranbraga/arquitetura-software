@@ -13,6 +13,21 @@ public class PotassiumCorrection {
     this.goal = goal;
     this.value = value;
   }
+
+  public Nutrient[] getAdditionalsNutrients(){
+    Nutrient nutrients[] = {};
+    switch(source){
+      case 1: 
+        nutrients[0] = new Nutrient("Enxofre", this.correction() * 0.17);
+        return nutrients;
+      case 2:
+        nutrients[0] = new Nutrient("Enxofre", this.correction() * 0.22);
+        nutrients[1] = new Nutrient("Magnésio", this.correction() * 0.18);
+        return nutrients;
+      default:
+        return nutrients;
+    }
+  }
   
   public double correction() {
     return (((this.ground.getPotassium() * this.goal / this.ground.getPotassium()/this.ground.ctcCmol()*100) - this.ground.getPotassium()) * 1104 / sourceValue[source-1]);
